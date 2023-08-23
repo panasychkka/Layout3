@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title> Layout3</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+                <div class="header-container__logo">
+                    <img src="/images/logo.png" alt="Website Logo" width="100" height="100">
+                </div>
+                <div class="header-container__company-name">
+                    <h1>Назва<br>компанії</h1>
+                    <p>сама кльова компанія</p>
+                </div>
+                <div class="header-container__feedback">
+                    <ul class="header-container__phone-numbers">
+                            <li><a href="tel:+38499777777">+38(499) 777-77-77</a></li>
+                            <li><a href="tel:+38499777777">+38(499) 777-77-77</a></li>
+                    </ul>  
+                    <button class="header-container__feedback-button" data-toggle="modal" data-target="#feedbackModal">
+                        Зворотній зв'язок
+                    </button>
+                </div>
+           </div>
+    </header>
+    <feedback>
+        <div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="feedbackModalLabel">Зворотній зв'язок</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="username">Ваше ім'я*</label>
+                                <input type="text" class="form-control" id="username" name="username">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Телефон*</label>
+                                <input type="phone" class="form-control" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail*</label>
+                                <input type="email" class="form-control" id="email" name="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Повідомлення</label>
+                                <input type="message" class="form-control" id="message" name="message">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Зареєструватися</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </feedback>
+</body>
+</html>
