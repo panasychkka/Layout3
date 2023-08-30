@@ -5,17 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <title> Layout3</title>
 </head>
 <body>
     <header>
         <div class="header-container">
+            <a href="https://internetdevels.ua/" target="_blank">
                 <div class="header-container__logo">
                     <img src="/images/logo.png" alt="Website Logo" width="100" height="100">
                 </div>
+            </a>
                 <div class="header-container__company-name">
-                    <h1>Назва<br>компанії</h1>
+                    <h1><b>Назва<br>компанії</b></h1>
                     <p>сама кльова компанія</p>
                 </div>
                 <div class="header-container__feedback">
@@ -23,55 +27,63 @@
                             <li><a href="tel:+38499777777">+38(499) 777-77-77</a></li>
                             <li><a href="tel:+38499777777">+38(499) 777-77-77</a></li>
                     </ul>  
-                </div>
-                <div class="header-container__feedback-button-container">
+                    <div class="header-container__feedback-button-container">
                     <button class="header-container__feedback-button" data-toggle="modal" data-target="#feedbackModal">
-                    Зворотній зв'язок
-                </button>
+                        <b>Зворотній зв'язок</b>
+                    </button>
+                    </div>
                 </div>
+                
            </div>
     </header>
     <div class="feedback">
-         <div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+        <div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-dialog">
                 <div class="close-button">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="feedbackModalLabel" class="feedback__title"><b>Зворотній зв'язок</b></h5>
-                    </div>
-                    <div class="modal-body feedback__body">
-                        <form class="feedback__form">
-                            <div class="form-group feedback__form-group">
-                                <label for="username" class="feedback__label">Ваше ім'я *</label>
-                                <input type="text" id="name" name="name" class="form-control feedback__input" required>
+            <div class="modal-content">
+                <form class="feedback__form">
+                            <div class="modal-top">  <!--Пишу top/main/bottom бо якщо писати через header/body/footer то з'являється непотрібно розділяюча горизонтальна лінія яку я не можу прибрати-->
+                                <h5 class="modal-title" id="feedbackModalLabel" class="feedback__title"><b>ЗВОРОТНІЙ ЗВ'ЯЗОК</b></h5>
                             </div>
-                            <div class="form-group feedback__form-group">
-                                <label for="phone" class="feedback__label">Телефон *</label>
-                                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" class="form-control feedback__input" required>
-                            </div>
-                            <div class="form-group feedback__form-group">
-                                <label for="email" class="feedback__label">Email *</label>
-                                <input type="email" id="email" name="email" class="form-control feedback__input" required>
-                            </div>
-                            <div class="form-group feedback__form-group">
-                                <label for="password" class="feedback__label">Повідомлення</label>
-                                <textarea id="message" name="message" rows="5" class="form-control feedback__textarea"></textarea>
-                            </div>
-                            <div class="submit">
-                            <button type="submit" class="btn__feedback__submit">Відправити</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                            <div class="modal-main">
+                               <div class="form-group__feedback__form-group">
+                                   <label for="username" class="feedback__label">Ваше ім'я *</label>
+                                   <input type="text" id="name" name="name" class="form-control feedback__input" required>
+                               </div>
+                               <div class="form-group__feedback__form-group">
+                                   <label for="phone" class="feedback__label">Телефон *</label>
+                                   <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" class="form-control feedback__input" required>
+                               </div>
+                               <div class="form-group__feedback__form-group">
+                                   <label for="email" class="feedback__label">Email *</label>
+                                   <input type="email" id="email" name="email" class="form-control feedback__input" required>
+                               </div>
+                               <div class="form-group__feedback__form-group">
+                                   <label for="password" class="feedback__label">Повідомлення</label>
+                                   <textarea id="message" name="message" rows="6" class="form-control feedback__textarea"></textarea>
+                               </div>
+                        </div>
+                        
+                           <div class="modal-bottom">
+                               <div class="submit">
+                                   <button type="submit" class="btn__feedback__submit">Відправити</button>
+                                   </div>
+                           </div>
+                       </form> 
             </div>
+            <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+            <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+            <script type="text/javascript">    
+            </script>
         </div>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        </div>
+        </div>
+        </div>
 </body>
 </html>
+

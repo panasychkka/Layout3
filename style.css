@@ -31,7 +31,7 @@ header {
 }
 .header-container__company-name {
     left: 10px;
-    line-height: 0.8;
+    line-height: 0;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -41,6 +41,8 @@ header {
 }
 .header-container__company-name h1{
     margin-top: -10px;
+    line-height: 0.8;
+    font-size: 33px;
 }
 .header-container__feedback {
     position: absolute;
@@ -60,48 +62,60 @@ header {
 
 .header-container__feedback-button{
     border: none; 
-    background-color:lightgrey;
-    color: #fff; 
+    background-color:lightgrey; 
     position: absolute;
-    right: auto;
+    right: 0;
+    color: gray;
+    bottom: -15px;
     text-decoration: none;  
     font-size: 23px;
     margin-left: auto;
-}
-
-.feedback__form {
-    padding: 46px;
-    margin-top: -45px;
-}
+    border: none;
+    text-decoration: underline dashed;
+}*/
 
  Стилі для кожного полі 
-.feedback__form-group {
+ .feedback__form-group {
     margin-bottom: 20px;
     text-align: center; 
-}/* Вирівнювання тексту по центру */
+}
 
 .feedback__label {
     display: block;
     margin-bottom: 5px;
     font-size: 14px;
 }
+.modal-title {
+    font-size: 22px;
+    border: 1px black solid;
+}
 
 .feedback__input,
 .feedback__textarea {
-    width: calc(100% - 40px); 
-    padding: 10px;
-    border: 1px solid #ccc;
+    border: 3px solid black;
     border-radius: 0;
+    margin-left: 3px;
+}
+.feedback__input{
+    height: 40px;
 }
 
 
-.feedback__submit {
-    padding: 10px 20px;
+.btn__feedback__submit {
+    padding: 10px 10px;
     border-radius: 0;
-    background-color: #007bff;
+    background-color:gray;
     color: #fff;
     border: none;
     cursor: pointer;
+    
+
+}
+.submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -40px;
 }
 
 .feedback__submit:hover {
@@ -109,17 +123,23 @@ header {
 }
 
 #feedbackModal .modal-dialog {
-    margin-top: 130px;
-}
-#feedbackModal .modal-dialog {
     max-width: none;
-    width: 505px;
     margin-top: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 505px;
+    top:10px;
 }
 
 #feedbackModal .modal-content {
-    height: 580px;
     margin-left: 39px;
+    width: 505px;
+    height: 580px;
+    padding: 30px 62px 10px 62px;
+}
+.modal-main{
+    margin-top: 20px;
 }
 .form-control,
 .btn {
@@ -129,13 +149,15 @@ header {
 .feedback__label {
     text-align: center;
 }
-
+.form-group__feedback__form-group{
+    margin-top: 22px;
+}
 .close-button {
     position: absolute;
-    top: 120px;
+    top: -25px;
     right: -28px;
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
     background-color: #ccc;
     display: flex;
     justify-content: center;
@@ -144,8 +166,15 @@ header {
 .close {
     background-color: white;
 }
-.submit{
-    display: flex;
-    width: 50px;
-    height: 40px;
+/*to remove lines*/
+/*idk mb i can create form without dividing*/
+.modal-top
+.modal-main
+.modal-bottom{
+    border: 0;
+    outline: 0; 
+}
+.modal-content{
+    border: 0;
+    outline: 0;
 }
