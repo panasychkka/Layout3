@@ -23,7 +23,6 @@ header {
     width: 980px;
     height: 100%;
     max-width: 100%;
-    
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -38,10 +37,10 @@ header {
     display: flex;
     flex-direction: column;
 }
-.header-container__company-name p{
+.header-container__company-name p {
     margin-top: 15px;
 }
-.header-container__company-name h1{
+.header-container__company-name h1 {
     margin-top: -10px;
     line-height: 0.7;
     font-size: 33px;
@@ -62,7 +61,7 @@ header {
     color: gray;
 } 
 
-.header-container__feedback-button{
+.header-container__feedback-button {
     border: none; 
     background-color:lightgrey; 
     position: absolute;
@@ -74,15 +73,12 @@ header {
     margin-left: auto;
     border: none;
     text-decoration: underline dashed;
-}*/
-
- Стилі для кожного полі 
+}
  .feedback__form-group {
     margin-bottom: 20px;
     text-align: center; 
     border-color: white;
 }
-
 .feedback__label {
     display: block;
     margin-bottom: 5px;
@@ -102,9 +98,7 @@ header {
 }
 .feedback__input{
     height: 40px;
-   
 }
-
 
 .btn__feedback__submit {
     padding: 10px 10px;
@@ -113,18 +107,12 @@ header {
     color: #fff;
     border: none;
     cursor: pointer;
-    
-
 }
 .submit{
     display: flex;
     justify-content: center;
     align-items: center;
     top: -40px;
-}
-
-.feedback__submit:hover {
-    background-color: #0056b3;
 }
 
 #feedbackModal .modal-dialog {
@@ -171,27 +159,11 @@ header {
 .close {
     background-color: white;
 }
-/*to remove lines*/
-/*idk mb i can create form without dividing*/
-.modal-top
-.modal-main
-.modal-bottom {
-    border: 0;
-    outline: 0; 
-}
-.modal-content{
-    border: 0;
-    outline: 0;
-}
 .btn__feedback__submit{
    margin-top: 35px;
     width: 130px;
 }
-
-
-
-
-/* Для маленьких екранів */
+/*adaptive*/
 @media (max-width: 576px) {
     header{
         height: 150px;
@@ -238,8 +210,35 @@ header {
         border: none;
         text-decoration: underline dashed;
     }
+    #feedbackModal .modal-dialog {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        top: -60px;
+    }
+    
+    #feedbackModal .modal-content {
+        margin-right: 45px;
+        width: 90%;
+        height: 480px;
+        padding: 20px 30px 10px 30px;
+    }
+    .modal-main{
+        margin-top: 20px;
+    }
+    .modal-title {
+        font-size: 16px;
+    }
+    .form-group__feedback__form-group{
+        margin-top: 5px;
+    }
+    .btn__feedback__submit{
+        margin-top: 20px;
+         width: 130px;
+     }    
 }
-/* Для середніх екранів */
+
 @media (min-width: 577px) and (max-width: 992px) {
     .header-container__phone-numbers a {
         font-size: 25px;
@@ -252,7 +251,5 @@ header {
     }
 }
 
-/* Для великих екранів */
 @media (min-width: 993px) {
-    
 }
