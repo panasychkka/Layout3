@@ -163,6 +163,9 @@ header {
    margin-top: 35px;
     width: 130px;
 }
+.error-message {
+    display: none; 
+}
 /*adaptive*/
 @media (max-width: 576px) {
     header{
@@ -191,29 +194,14 @@ header {
         margin-bottom: 10px;
     }
     .header-container__phone-numbers a {
-        text-decoration: none;
         font-size: 15px;
-        font-family: 'PT Sans Narrow', sans-serif;
-        color: gray;
     } 
     
     .header-container__feedback-button{
-        border: none; 
-        background-color:lightgrey; 
-        position: absolute;
-        right: 0;
-        color: gray;
         bottom: -15px;
-        text-decoration: none;  
         font-size: 13px;
-        margin-left: auto;
-        border: none;
-        text-decoration: underline dashed;
     }
     #feedbackModal .modal-dialog {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         width: 100%;
         top: -60px;
     }
@@ -253,3 +241,5 @@ header {
 
 @media (min-width: 993px) {
 }
+
+
