@@ -187,6 +187,12 @@ header {
     text-align: center;
     margin: 0 10px;
 }
+
+body {
+    background: #3498db;
+    color: #fff;
+  }
+  
 @media (max-width: 864px) {
     .desktop-menu-item {
         font-size: 20px;
@@ -295,6 +301,34 @@ header {
         height: 22%;
     }
 }
+.slider-box {
+    width: 100%;
+    overflow: hidden;
+    position: relative; 
+  }
+  
+  .content-slider {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+  }
+  
+  .slider {
+    width: 100%; 
+    display: flex; 
+    overflow: hidden;
+    height: 43vh;
+  }
+  .slider div {
+    width: 100%;
+    text-align: center; 
+  }
+  .slider img {
+    max-width: 100%;
+    margin: 0 auto; 
+    max-height: auto;
+  }
+  
 .menu__item {
     display: block;
     padding: 20px 24px;
@@ -308,7 +342,7 @@ header {
 .menu__item:hover {
     background-color: #CFD8DC;
 }
-/*adaptive*/
+
 @media (max-width: 576px) {
     header{
         height: 150px;

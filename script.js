@@ -47,5 +47,15 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
-});
-
+    // Ініціалізація Slick Slider
+  $(".single-item").slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    autoplay: true,
+    autoplaySpeed: 4000,
+  });
+});       
