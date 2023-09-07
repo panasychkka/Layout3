@@ -187,12 +187,9 @@ header {
     text-align: center;
     margin: 0 10px;
 }
-
-body {
-    background: #3498db;
-    color: #fff;
-  }
-  
+.desktop-menu-item:hover {
+    text-decoration: underline; 
+}  
 @media (max-width: 864px) {
     .desktop-menu-item {
         font-size: 20px;
@@ -201,12 +198,17 @@ body {
         height: 60px;
     }
 }
-.desktop-menu-item:hover {
-    text-decoration: underline; 
+@media (min-width:865px) and (max-width:921px) {
+    .desktop-menu-item {
+        font-size: 25px;
+    }
 }
 @media (max-width: 768px) {
     .desktop-menu-item{
         display: none;
+    }
+    .slider-box{
+        top:-23px;
     }
 }
 @media (min-width: 768px) {
@@ -291,6 +293,7 @@ body {
     list-style: none;
     background-color: lightgray;
     transition-duration: .25s;
+    z-index: 10; 
 }
 @media (max-width: 418px){
     .mobile-menu a{
@@ -416,7 +419,9 @@ body {
     .header-container__feedback {
         top: 50px;
     }
-
+    .mobile-menu{
+    top:290px;
+    }
 }
 
 
