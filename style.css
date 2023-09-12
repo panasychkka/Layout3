@@ -347,6 +347,7 @@ header {
 }
 main {
     max-width: 100%;
+    max-height: 100%;
     border: 1px solid black;
     margin-top: -30px;
 }
@@ -361,11 +362,16 @@ main {
     height:790px;
 }
 /*Category*/
-
+.container-left{
+    width: 220px;  
+    margin-left: 55px; 
+    margin-top: 35px;
+    margin-right: -20px;
+    border: 1px solid black; 
+}
 .categories-menu{
-  width: 180px;  
-  margin-left: 75px; 
-  margin-top: 35px;
+  max-width: 180px;  
+  border: 1px solid black;
 }
 
 .categories li{
@@ -376,11 +382,23 @@ main {
 .sub-categories li{
     font-size: 12px;
     margin-bottom: 5px;
-    margin-left: 20px;
+    margin-left: 30px;
 }
 .categories a,
 .categories a:hover{
     color: gray;
+}
+.logo-x{
+    margin-top:73px;
+    margin-left: 48px;
+}   
+.logo-x img{
+    box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.5);
+}
+.logo-x-caption p{
+font-size:28px;
+margin-top: 15px;
+margin-left: -28px;
 }
 .items-boxes{
     display: flex;
@@ -389,14 +407,15 @@ main {
     align-items: flex-start;
     margin-top: 40px;
     padding: 0;
-    margin-left: 30px;
+    margin-left: 20px;
 }
 .item-box{
     width: 250px;
     flex-direction: column;
     display: flex;
-    margin-right: 15px;
+    margin-right: 5px;
     margin-bottom: 20px;
+    margin-left:10px;
 }
 figure{
     height: 380px;
