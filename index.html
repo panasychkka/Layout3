@@ -8,86 +8,86 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
     <script src="script.js"></script>
-     <!-- Добавляем стили из CDN -->
+     <!-- add style from CDN -->
      <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
-     <!-- Добавляем тему по умолчанию из CDN -->
+     <!-- add theme from CDN -->
      <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     </head>
 <body>
     <header>
         <div class="header-container">
-            <a href="https://internetdevels.ua/" target="_blank">
-                <div class="header-container__logo">
-                    <img src="images/logo.png" alt="Website Logo" width="100" height="100">
+                <a href="https://internetdevels.ua/" target="_blank">
+                    <div class="header-container__logo">
+                        <img src="images/logo.png" alt="Website Logo" width="100" height="100">
+                    </div>
+                </a>
+                <div class="header-container__company-name">
+                        <h1><b>Назва<br>компанії</b></h1>
+                        <p>сама кльова компанія</p>
                 </div>
-            </a>
-             <div class="header-container__company-name">
-                    <h1><b>Назва<br>компанії</b></h1>
-                    <p>сама кльова компанія</p>
-             </div>
-            <div class="header-container__feedback">
-                 <ul class="header-container__phone-numbers">
-                     <li><a href="tel:+38499777777">+38(499) 777-77-77</a></li>
-                     <li><a href="tel:+38499777777">+38(499) 777-77-77</a></li> 
-                </ul>  
-             <div class="header-container__feedback-button-container">
-                 <button class="header-container__feedback-button" data-toggle="modal" data-target="#feedbackModal">
-                    <b>Зворотній зв'язок</b>
-                </button>
-            </div>
-            </div>
-            </div>
+                <div class="header-container__feedback">
+                    <ul class="header-container__phone-numbers">
+                        <li><a href="tel:+38499777777">+38(499) 777-77-77</a></li>
+                        <li><a href="tel:+38499777777">+38(499) 777-77-77</a></li> 
+                    </ul>  
+                <div class="header-container__feedback-button-container">
+                    <button class="header-container__feedback-button" data-toggle="modal" data-target="#feedbackModal">
+                        <b>Зворотній зв'язок</b>
+                    </button>
+                </div>
+                </div>
+        </div>
     </header>
     <feedback>
         <div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-dialog">
-                <div class="close-button">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                <div class="modal-dialog">
+                    <div class="close-button">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                    </div>
+                    <div class="modal-content">
+                        <form class="feedback__form" id="feedback" novalidate>
+                                    <div class="modal-top">  
+                                        <h5 class="modal-title" id="feedbackModalLabel" class="feedback__title"><b>ЗВОРОТНІЙ ЗВ'ЯЗОК</b></h5>
+                                    </div>
+                                    <div class="modal-main">
+                                    <div class="form-group__feedback__form-group">
+                                        <label for="username" class="feedback__label"> Ваше ім'я *</label>
+                                        <input type="text" id="name" name="name" class="form-control feedback__input" required>
+                                        <div class="error-message" id="name-error"></div>
+                                    </div>
+                                    <div class="form-group__feedback__form-group">
+                                        <label for="phone" class="feedback__label"> Телефон *</label>
+                                        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" class="form-control feedback__input" required>
+                                        <div class="error-message" id="phone-error"></div>
+                                    </div>
+                                    <div class="form-group__feedback__form-group">
+                                        <label for="email" class="feedback__label"> Email *</label>
+                                        <input type="email" id="email" name="email" class="form-control feedback__input" required>
+                                        <div class="error-message" id="email-error"></div>
+                                    </div>
+                                    <div class="form-group__feedback__form-group">
+                                        <label for="password" class="feedback__label">Повідомлення</label>
+                                        <textarea id="message" name="message" rows="6" class="form-control feedback__textarea"></textarea>
+                                    </div>
+                                </div>
+                                <div class="modal-bottom" id="modal-bottom-send">
+                                    <div class="submit">
+                                        <button type="submit" class="btn__feedback__submit"><b>ВІДПРАВИТИ</b></button>
+                                    </div>
+                                </div>
+                        </form> 
+                    </div>
+                    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+                    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
                 </div>
-            <div class="modal-content">
-                <form class="feedback__form" id="feedback" novalidate>
-                            <div class="modal-top">  
-                                <h5 class="modal-title" id="feedbackModalLabel" class="feedback__title"><b>ЗВОРОТНІЙ ЗВ'ЯЗОК</b></h5>
-                            </div>
-                            <div class="modal-main">
-                               <div class="form-group__feedback__form-group">
-                                   <label for="username" class="feedback__label"> Ваше ім'я *</label>
-                                   <input type="text" id="name" name="name" class="form-control feedback__input" required>
-                                   <div class="error-message" id="name-error"></div>
-                               </div>
-                               <div class="form-group__feedback__form-group">
-                                   <label for="phone" class="feedback__label"> Телефон *</label>
-                                   <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" class="form-control feedback__input" required>
-                                   <div class="error-message" id="phone-error"></div>
-                               </div>
-                               <div class="form-group__feedback__form-group">
-                                   <label for="email" class="feedback__label"> Email *</label>
-                                   <input type="email" id="email" name="email" class="form-control feedback__input" required>
-                                   <div class="error-message" id="email-error"></div>
-                               </div>
-                               <div class="form-group__feedback__form-group">
-                                   <label for="password" class="feedback__label">Повідомлення</label>
-                                   <textarea id="message" name="message" rows="6" class="form-control feedback__textarea"></textarea>
-                               </div>
-                          </div>
-                          <div class="modal-bottom" id="modal-bottom-send">
-                              <div class="submit">
-                                  <button type="submit" class="btn__feedback__submit"><b>ВІДПРАВИТИ</b></button>
-                              </div>
-                          </div>
-                </form> 
             </div>
-            <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-            <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-        </div>
-        </div>
         </div>
     </feedback>
-   <div class="menu-container">
+    <div class="menu-container">
         <div class="menu__desktop-menu">
             <a href="#" class="desktop-menu-item"> Головна  | </a>
             <a href="#" class="desktop-menu-item"> Каталог  | </a>
@@ -128,7 +128,7 @@
         </div>
     </div>
     <main>
-        <div class="content">
+    <div class="content">
                 <div class="container-fluid">
                 <div class="container-left">
                     <div class="cat-breadcrumbs">
@@ -164,8 +164,6 @@
                             </ul>
                         </nav>
                     </div>
-                        
-                       
                         <nav role="navigation">
                             <div id="menuToggle">
                               <input type="checkbox" />
@@ -201,7 +199,8 @@
                                 </li>
                               </ul>
                             </div>
-                            </nav> <div class="logo-x">
+                            </nav> 
+                            <div class="logo-x">
                             <img src="images/logo-x.jpg" alt="Logo-X" width:100 height:100>
                         <div class="logo-x-caption">
                             <p><b>Прайс-лист</b></p>
@@ -281,7 +280,7 @@
                     </div>
                 </div>
             </div>
-            </div>
+    </div>
     </main>
     <footer>
         <div class="container-footer">
