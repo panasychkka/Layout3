@@ -38,6 +38,7 @@ header {
         margin-right: 30px;
     }
 }
+
 .header-container__company-name {
     left: 10px;
     line-height: 0;
@@ -786,6 +787,28 @@ footer{
      }    
     .menu__btn{
         top: 165px
+    }
+}
+@media (max-width:400px) {
+    .header-container__logo {
+        max-height: 40px;
+        max-width: 40px;
+        margin-bottom: 30px;
+        margin-right: 25px;
+        margin-left: -20px;
+    }
+    .header-container__company-name{
+        font-size: 8px;
+    }
+    .header-container__phone-numbers a {
+        font-size: 12px;
+        margin-right: 0px;
+    } 
+    .header-container__feedback-button{
+        font-size: 10px;
+    }
+    .header-container__feedback{
+        margin-right: 0px;
     }
 }
 
