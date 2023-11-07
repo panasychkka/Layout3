@@ -347,6 +347,34 @@ header {
     height: 100%;
     object-fit: cover;
 }
+/* Стилізація контейнера з кнопками */
+.slider-box {
+    position: relative;
+}
+
+/* Стилізація кнопок "Previous" та "Next" */
+.prev-slide,
+.next-slide {
+    position: absolute;
+    top: 47%; /* Позиціонування по центру вертикалі */
+    transform: translateY(-50%); /* Вирівнювання вертикально */
+    background-color: lightgray;
+    border: none;
+    font-size: 45px; /* Розмір шрифту для кнопок */
+    cursor: pointer;
+    width: 35px;
+}
+
+/* Стилізація кнопки "Previous" */
+.prev-slide {
+    left: 270px; /* Відступ від лівого краю 200 пікселів */
+}
+
+/* Стилізація кнопки "Next" */
+.next-slide {
+    right: 290px; /* Відступ від правого краю 200 пікселів */
+}
+
 @media (max-width: 576px) {
     .slider-box {
         height: 200px;
