@@ -220,6 +220,7 @@ header {
         display: none;
     } 
 }
+
 /*for burger*/
 #menu__toggle {
     opacity: 0;
@@ -294,15 +295,23 @@ header {
     list-style: none;
     background-color: lightgray;
     transition-duration: .25s;
-    z-index: 10; 
+    z-index: 1; 
 }
+
 @media (max-width: 418px){
     .mobile-menu a{
         color: gray;
         font-size: 12px; 
     }
     .mobile-menu {
-        height: 22%;
+        height: 25%;
+        margin-top: -23px;
+    }
+}
+@media (min-width: 418px) and (max-width:576px){
+    .mobile-menu {
+        height: 30%;
+        margin-top: -23px;
     }
 }
 .slider-box {
