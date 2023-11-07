@@ -352,32 +352,41 @@ header {
     position: relative;
 }
 
-/* Стилізація кнопок "Previous" та "Next" */
 .prev-slide,
 .next-slide {
     position: absolute;
-    top: 47%; /* Позиціонування по центру вертикалі */
+    top: 47%; 
     transform: translateY(-50%); /* Вирівнювання вертикально */
     background-color: lightgray;
     border: none;
-    font-size: 45px; /* Розмір шрифту для кнопок */
+    font-size: 45px;
     cursor: pointer;
     width: 35px;
 }
 
-/* Стилізація кнопки "Previous" */
 .prev-slide {
-    left: 270px; /* Відступ від лівого краю 200 пікселів */
+    left: 270px;
 }
 
-/* Стилізація кнопки "Next" */
 .next-slide {
-    right: 290px; /* Відступ від правого краю 200 пікселів */
+    right: 290px; 
 }
-
+@media(max-width:900px) {
+    .prev-slide{
+        left: 70px; 
+    }
+    .next-slide {
+        right: 70px; 
+    }
+}
 @media (max-width: 576px) {
     .slider-box {
         height: 200px;
+    }
+    .prev-slide,
+    .next-slide {
+        font-size: 25px;
+        width: 30px;
     }
 }
 .menu__item {
